@@ -14,7 +14,7 @@ resource "aws_vpc_dhcp_options_association" "dns_resolver" {
 vpc_id         = "${aws_vpc.vpc.id}"
 dhcp_options_id = "${var.custom_dhcp_options_id}"
 }
-## TODO - update region to 'us-gov-west-1' ##
+#TODO - update region 
 resource "aws_subnet" "subnet_1a" {
   vpc_id                  = "${aws_vpc.vpc.id}"
   cidr_block              = "${cidrsubnet(var.cidr_block,var.subnet_size,0)}"
@@ -25,7 +25,7 @@ resource "aws_subnet" "subnet_1a" {
     "Name", format("%s%s",var.vpc,"-subnet-1a")
   ))}"
 }
-## TODO - update region to 'us-gov-west-1' ##
+## TODO - update region 
 resource "aws_subnet" "subnet_1b" {
   vpc_id                  = "${aws_vpc.vpc.id}"
   cidr_block              = "${cidrsubnet(var.cidr_block,var.subnet_size,1)}"
@@ -36,7 +36,7 @@ resource "aws_subnet" "subnet_1b" {
     "Name", format("%s%s",var.vpc,"-subnet-1b")
   ))}"
 }
-## TODO - update region to 'us-gov-west-1' ##
+## TODO - update region
 resource "aws_subnet" "subnet_1c" {
   vpc_id                  = "${aws_vpc.vpc.id}"
   cidr_block              = "${cidrsubnet(var.cidr_block,var.subnet_size,2)}"
@@ -80,7 +80,7 @@ resource "aws_route_table_association" "rt_1c" {
   route_table_id = "${aws_route_table.rt_1c.id}"
   subnet_id      = "${aws_subnet.subnet_1c.id}"
 }
-## TODO - update region to 'us-gov-west-1' ##
+## TODO - update region
 resource "aws_vpc_endpoint" "s3" {
   vpc_id       = "${aws_vpc.vpc.id}"
   service_name = "com.amazonaws.us-east-1.s3"

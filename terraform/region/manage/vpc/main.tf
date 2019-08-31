@@ -22,7 +22,7 @@ data terraform_remote_state "global_state_name" {
     encrypt        = true
   }
 }
-## TODO - update region to 'us-gov-west-1' ##
+## TODO - update
 data terraform_remote_state "dev_state_name" {
   backend = "s3" 
   config = {
