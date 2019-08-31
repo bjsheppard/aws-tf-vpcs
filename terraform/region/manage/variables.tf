@@ -10,7 +10,7 @@ variable "vpc" {
 }
 
 variable "Environment" {
-  default = "prodelopment"
+  default = "manageelopment"
 }
 
 /********************************/
@@ -30,14 +30,14 @@ variable "vpc-cidr" {
 /************************************/
 /*Set the Subnets used by resources**/
 /************************************/
-variable "prod_subnet_AZ1" {
-  description = "Subnet to be used for prod AZ1"
+variable "manage_subnet_AZ1" {
+  description = "Subnet to be used for manage AZ1"
   #TODO
   default     = "subnet_id"
 }
 
-variable "prod_subnet_AZ2" {
-  description = "Subnet to be used for prod AZ2"
+variable "manage_subnet_AZ2" {
+  description = "Subnet to be used for manage AZ2"
   #TODO
   default     = "subnet_id"
 }
@@ -50,14 +50,14 @@ variable "availability_zones" {
   default = ["AZ_1_name", "AZ_2_name"]
 }
 
-variable "prod_AZ1" {
-  description = "Availability Zone for all prod resources"
+variable "manage_AZ1" {
+  description = "Availability Zone for all manage resources"
   #TODO
   default     = "AZ_1_name"
 }
 
-variable "prod_AZ2" {
-  description = "Availability Zone for all prod resources"
+variable "manage_AZ2" {
+  description = "Availability Zone for all manage resources"
   #TODO
   default     = "AZ_2_name"
 }

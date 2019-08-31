@@ -13,7 +13,7 @@ resource "aws_security_group" "ssh_sg" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
-  #TODO -- need to update base tags once find a different way to do prod base tags
+  #TODO -- need to update base tags once find a different way to do manage base tags
   tags = merge(
     {
       "Name"          = "ssh_sg"
@@ -56,7 +56,7 @@ resource "aws_security_group" "jenkins_sg" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
-  #TODO -- need to update base tags once find a different way to do prod base tags
+  #TODO -- need to update base tags once find a different way to do manage base tags
   tags = merge(
     {
       "Name"          = "jenkins_sg"
@@ -93,7 +93,7 @@ resource "aws_security_group" "dns_sg" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
-  #TODO -- need to update base tags once find a different way to do prod base tags
+  #TODO -- need to update base tags once find a different way to do manage base tags
   tags = merge(
     {
       "Name"          = "dns_sg"

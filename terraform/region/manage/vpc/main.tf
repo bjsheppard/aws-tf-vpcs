@@ -23,7 +23,7 @@ data terraform_remote_state "global_state_name" {
   }
 }
 ## TODO - update
-data terraform_remote_state "dev_state_name" {
+data terraform_remote_state "manage_state_name" {
   backend = "s3" 
   config = {
     bucket         = "state_bucket_name"
@@ -52,7 +52,7 @@ resource "aws_vpc_dhcp_options" "custom-dhcp-options" {
     # netbios_node_type = 2
     ####################
 
-    # tags = "${merge(local.dev_base_tags, var.dhcp_options_tags)}"
+    # tags = "${merge(local.manage_base_tags, var.dhcp_options_tags)}"
 
     tags = "${merge(
             "${map(

@@ -27,8 +27,8 @@ variable "cidr_block" {
 locals {
     #TODO
     region = "${data.terraform_remote_state.<global_state_name>.region}"
-    vpc = "${data.terraform_remote_state.<dev_state_name>.vpc}"
-    dvpc_base_tags = "${data.terraform_remote_state.<dev_state_name>.dvpc_base_tags}"
+    vpc = "${data.terraform_remote_state.<prod_state_name>.vpc}"
+    dvpc_base_tags = "${data.terraform_remote_state.<prod_state_name>.dvpc_base_tags}"
 }
 
 

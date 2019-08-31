@@ -19,20 +19,20 @@ output "vpc-cidr_out" {
   value = var.vpc-cidr
 }
 
-output "prod_subnet_1_out" {
-  value = var.prod_subnet_AZ1
+output "manage_subnet_1_out" {
+  value = var.manage_subnet_AZ1
 }
 
-output "prod_subnet_2_out" {
-  value = var.prod_subnet_AZ2
+output "manage_subnet_2_out" {
+  value = var.manage_subnet_AZ2
 }
 
-output "prod_AZ1_out" {
-  value = var.prod_AZ1
+output "manage_AZ1_out" {
+  value = var.manage_AZ1
 }
 
-output "prod_AZ2_out" {
-  value = var.prod_AZ2
+output "manage_AZ2_out" {
+  value = var.manage_AZ2
 }
 
 output "dvpc_base_tags_out" {
