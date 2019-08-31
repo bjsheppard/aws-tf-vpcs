@@ -35,7 +35,7 @@ output "manage_AZ2_out" {
   value = var.manage_AZ2
 }
 
-output "dvpc_base_tags_out" {
+output "mvpc_base_tags_out" {
   value = local.base_tags
 }
 

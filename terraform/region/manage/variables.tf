@@ -6,7 +6,7 @@ provider "aws" {
 }
 
 variable "vpc" {
-  default = "dvpc"
+  default = "mvpc"
 }
 
 variable "Environment" {

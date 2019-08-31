@@ -58,14 +58,14 @@ resource "aws_vpc_dhcp_options" "custom-dhcp-options" {
             "${map(
                 "Name", "${local.vpc}-dhcp-options-set"
             )}",
-            "${local.dvpc_base_tags}"
+            "${local.mvpc_base_tags}"
   )}"
 }
 
 module "base" {
   source = "../../../modules/vpc"
 
-  base_tags = "${local.dvpc_base_tags}"
+  base_tags = "${local.mvpc_base_tags}"
   vpc = "${local.vpc}"
   cidr_block     = "${var.cidr_block}"
   ## TODO - uncomment to establish VPN resources ##

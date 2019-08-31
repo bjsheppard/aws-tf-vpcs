@@ -35,7 +35,7 @@ output "prod_AZ2_out" {
   value = var.prod_AZ2
 }
 
-output "dvpc_base_tags_out" {
+output "pvpc_base_tags_out" {
   value = local.base_tags
 }
 

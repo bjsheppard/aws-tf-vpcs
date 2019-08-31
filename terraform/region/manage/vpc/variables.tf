@@ -28,7 +28,7 @@ locals {
     #TODO
     region = "${data.terraform_remote_state.<global_state_name>.region}"
     vpc = "${data.terraform_remote_state.<manage_state_name>.vpc}"
-    dvpc_base_tags = "${data.terraform_remote_state.<manage_state_name>.dvpc_base_tags}"
+    mvpc_base_tags = "${data.terraform_remote_state.<manage_state_name>.mvpc_base_tags}"
 }
 
 
